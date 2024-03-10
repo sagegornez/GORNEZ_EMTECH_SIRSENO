@@ -1,0 +1,28 @@
+<!-- 
+<style>
+h1 {text-align: center;}
+</style>
+
+<body style="background-color: #ffffff;">
+
+<h1>ACTIVITY 4</h1>
+<hr> 
+
+
+<app-display> </app-display>
+
+
+ -->
+ <div>
+    <app-game-control (IncNumber)="onIncNumber($event)"></app-game-control>
+  </div>
+  
+  <div *ngIf="oddNumbers.length > 0">
+    <h2>Odd Numbers:</h2>
+    <app-odd *ngFor="let newNumber of oddNumbers" [number]="newNumber"></app-odd>
+  </div>
+  
+  <div *ngIf="evenNumbers.length > 0">
+    <h2>Even Numbers:</h2>
+    <app-even *ngFor="let newNumber of evenNumbers" [number]="newNumber"></app-even>
+  </div>
